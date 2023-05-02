@@ -2,8 +2,6 @@ import React from 'react'
 
 import logoMail from '../imgs/mail.png'
 
-import { RxMagnifyingGlass } from 'react-icons/rx'
-
 import Testimonials from '../components/Testimonials'
 import PageHero from '../components/PageHero'
 import Categories from './Categories'

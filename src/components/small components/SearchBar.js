@@ -10,7 +10,6 @@ const SearchBar = () => {
 const [productsData, setProductsData] = useState([]);
 const [filteredData, setFilteredData] = useState();
 const [showSearchResults, setShowSearchResults] = useState(false);
-const [showCloseButton, setShowCloseButton] = useState(false);
 
   useEffect(() => {
     fetch('https://fakestoreapi.com/products', {

@@ -11,16 +11,16 @@ const Footer = () => {
             <FaTwitter className='text-3xl' />
         </div>
         <div className='flex gap-2 font-bold'>
-            <a href="#">Info</a>
+            <button>Info</button>
             <p>&#183;</p>
-            <a href="#">Support</a>
+            <button>Support</button>
             <p>&#183;</p>
-            <a href="#">Development</a>
+            <button>Development</button>
         </div>
         <div className='flex gap-2 font-bold text-sm'>
-            <a href="#" className='hover:underline hover:decoration-solid'>Terms of Use</a>
+            <button className='hover:underline hover:decoration-solid'>Terms of Use</button>
             <p>&#183;</p>
-            <a href="#" className='hover:underline hover:decoration-solid'>Privacy Policy</a>
+            <button className='hover:underline hover:decoration-solid'>Privacy Policy</button>
         </div>
         <div>
             <p className='text-zinc-300 text-sm'>&#169; 2023 Alisson Rego</p>

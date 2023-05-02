@@ -2,7 +2,7 @@ import React from 'react'
 
 import { AiOutlineArrowLeft } from 'react-icons/ai'
 
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const GoBackButton = ( { text } ) => {
 

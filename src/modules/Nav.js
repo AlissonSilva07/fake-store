@@ -26,18 +26,18 @@ const Nav = () => {
         </div>
         <div className='w-[2px] h-[40px] bg-fuchsia-900'></div>
         <div className='w-auto flex items-center gap-10'>
-            <a href="#" className='flex flex-col items-center gap-1'>
+            <button className='flex flex-col items-center gap-1'>
                 <AiOutlineHeart className='text-2xl text-gray-400' />
                 <p className='text-xs text-gray-400 font-bold'>Fav</p>
-            </a>
-            <a href="#" className='flex flex-col items-center gap-1'>
+            </button>
+            <button className='flex flex-col items-center gap-1'>
                 <AiOutlineShoppingCart className='text-2xl text-gray-400' />
                 <p className='text-xs text-gray-400 font-bold'>Cart</p>
-            </a>
-            <a href="#" className='flex flex-col items-center gap-1'>
+            </button>
+            <button className='flex flex-col items-center gap-1'>
                 <AiOutlineUser className='text-2xl text-gray-400' />
                 <p className='text-xs text-gray-400 font-bold'>Profile</p>
-            </a>
+            </button>
         </div>
     </nav>
   )

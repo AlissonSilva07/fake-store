@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { useParams, Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 import { useState, useEffect } from 'react';
 
@@ -33,12 +33,12 @@ const SingleProductView = () => {
       setRemoveLoading(true)
     })
     .catch((err) => console.log(err))
-  }, []);
+  }, [pageId]);
 
   return (
     <div className='my-20 mx-20 flex flex-col gap-4 relative'>
 
-    {productsData != 0 &&
+    {productsData !== 0 &&
         <div className='absolute bottom-4 right-6'>
             <span className='text-fuchsia-900 font-bold'>Product ID: #{productsData.id}</span>
         </div>}
@@ -51,11 +51,11 @@ const SingleProductView = () => {
       {!removeLoading && <Loading />}
 
       <div>
-      {productsData != 0 &&
+      {productsData !== 0 &&
         <div>
             <div className='h-auto flex gap-4 p-4 bg-white border shadow-xl rounded-xl overflow-hidden'>
                 <div className='w-2/5 p-4 border flex flex-col items-center rounded-xl'>
-                    <img src={productsData.image} alt="product image" className='h-80 object-contain' />
+                    <img src={productsData.image} alt="product" className='h-80 object-contain' />
                 </div>
                 <div className='w-3/5 flex flex-col gap-4 mx-4'>
                     <div>

@@ -2,7 +2,6 @@ import React from 'react'
 
 import { Link } from 'react-router-dom'
 
-import logoImg from '../imgs/logo.png'
 import mainImg2 from '../imgs/fashionable-woman-using-cellphone-with-holding-colorful-paper-bag-eyeglasses_23-2148101603.jpg'
 import { AiOutlineArrowDown } from 'react-icons/ai'
 import StandardButton from './small components/StandardButton'
