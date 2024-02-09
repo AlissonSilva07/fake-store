@@ -9,12 +9,10 @@ const ProductsGrid = ( { productsData } ) => {
 
   return (
     <>
-    <div className='grid grid-flow-row grid-cols-4 gap-4 p-4'>
+    <div className='grid grid-flow-row grid-cols-4 gap-4 py-4 pl-4'>
       {productsData.length > 0 && productsData.map((product) => {
           return(
-              <div className='flex flex-col w-62 gap-2 p-4 items-center bg-white rounded-2xl shadow-xl overflow-hidden border relative z-0'>
-
-                  
+              <div className='flex flex-col w-full gap-2 p-4 items-center bg-white rounded-2xl shadow-xl overflow-hidden border relative z-0'>
                   <button className='text-center p-1 border hover:shadow-md rounded-full absolute top-2 right-2 z-40'>
                     <AiOutlineHeart className='text-xl text-fuchsia-900' />
                   </button>
@@ -29,7 +27,7 @@ const ProductsGrid = ( { productsData } ) => {
                         <p className='text-xs text-fuchsia-900 font-bold'>{product.category}</p>
                       </div>
                       <div>
-                        <p className='w-52 truncate text-base text-black'>{product.title}</p>
+                        <p className='w-full text-ellipsis overflow-hidden line-clamp-1 text-base text-black'>{product.title}</p>
                       </div>
                       <div className='flex align-top'>
                         <div>
