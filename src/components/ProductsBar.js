@@ -16,7 +16,7 @@ const ProductsBar = ({productsData , onClickGrid, onClickList}) => {
         text-white 
         text-base 
         font-bold 
-        rounded-xl 
+        rounded-b-xl 
         shadow-sm'>
 
           <div>

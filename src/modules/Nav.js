@@ -11,7 +11,7 @@ import NavItems from '../components/small components/NavItems'
 
 const Nav = () => {
   return (
-    <nav className='fixed top-0 right-0 left-0 h-20 px-20 flex items-center gap-10 bg-white z-50'>
+    <nav className='fixed top-0 right-0 left-0 h-20 px-20 flex items-center gap-10 bg-white shadow-xl z-50'>
         <div>
             <Link to='/' className='w-auto flex items-center gap-4'>
                 <img src={logoImg} alt="company logo" className='h-10' />
