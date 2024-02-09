@@ -8,6 +8,7 @@ import Nav from "./modules/Nav";
 
 import BackToTop from "./components/small components/BackToTop";
 import { useEffect } from "react";
+import { ProductProvider } from "./context/ProductContext";
 
 function App() {
 
@@ -32,12 +33,14 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <Nav />
-      <Outlet />
-      {showBTT && <BackToTop handleClick={handleScrollUp} />}
-      <Footer />
-    </div>
+    <>
+      <ProductProvider>
+        <Nav />
+        <Outlet />
+        {showBTT && <BackToTop handleClick={handleScrollUp} />}
+        <Footer />
+      </ProductProvider>
+    </>
   );
 }
 
