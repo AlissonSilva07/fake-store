@@ -1,52 +1,31 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import { useState, useEffect } from 'react'
 
 import ProductsView from '../modules/ProductsView'
 import SideFilters from '../modules/SideFilters';
 import Loading from '../components/small components/Loading';
+import { ProductContext } from '../context/ProductContext';
 
 const Products = () => {
 
-  const [productsData, setProductsData] = useState([]);
+  const [products, categories, removeLoading] = useContext(ProductContext);
 
-  const [removeLoading, setRemoveLoading] = useState(false);
+  
   const [filterCategory, setFilterCategory] = useState('');
 
-  useEffect(() => {
-    fetch('https://fakestoreapi.com/products', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-    .then(res => res.json())
-    .then((data) => {
-      setProductsData(data)
-      setRemoveLoading(true)
-    })
-    .catch((err) => console.log(err))
-  }, []);
-
-  const unique = productsData.filter(
-    (obj, index) =>
-      productsData.findIndex(
-        (item) => item.category === obj.category && item.name === obj.name
-      ) === index
-  )
-
   function handleClick (e) {
-    setFilterCategory(e.target.innetText)
+    setFilterCategory(e.target.innerText)
   }
 
 
   return (
     <div>
       {!removeLoading && <Loading />}
-      {productsData.length > 0 && (
+      {products && (
         <div className='ml-80 mr-20 mt-20 relative'>
-          <SideFilters handleClick={handleClick} uniqueCategories={unique} productsData={productsData}/>
-          <ProductsView filterCategory={filterCategory} productsData={productsData} />
+          <SideFilters handleClick={handleClick} categories={categories}/>
+          <ProductsView filterCategory={filterCategory} productsData={products} removeLoading={removeLoading} />
         </div>
       )}
     </div>

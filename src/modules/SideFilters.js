@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { ProductContext } from '../context/ProductContext';
 
-const SideFilters = ( { productsData, uniqueCategories, handleClick } ) => {
+const SideFilters = ( { handleClick, categories } ) => {
 
   return (
     <aside className='container fixed top-20 left-20 flex flex-col items-start w-60 p-4 bg-white shadow-xl rounded-2xl border'>
@@ -9,11 +10,11 @@ const SideFilters = ( { productsData, uniqueCategories, handleClick } ) => {
                 <p className='font-bold'>Filter by category: </p>
             </div>
             <div>
-                {uniqueCategories.length > 0 && uniqueCategories.map(cat => {
+                {categories && categories.map(cat => {
                   return (
-                  <div key={cat.id}>
+                  <div key={cat.index}>
                     <button onClick={handleClick}>
-                      <p className='hover:text-fuchsia-900 hover:font-bold'>{cat.category.charAt(0).toUpperCase() + cat.category.slice(1)}</p>
+                      <p className='hover:text-fuchsia-900 hover:font-bold'>{cat}</p>
                     </button>
                   </div>
                   )

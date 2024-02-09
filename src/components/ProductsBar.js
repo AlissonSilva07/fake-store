@@ -12,11 +12,11 @@ const ProductsBar = ({productsData , onClickGrid, onClickList}) => {
         w-auto 
         py-2 
         px-6 
-        mx-4 
+        ml-4 
         text-white 
         text-base 
         font-bold 
-        rounded-xl 
+        rounded-b-xl 
         shadow-sm'>
 
           <div>
