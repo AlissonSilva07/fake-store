@@ -14,7 +14,7 @@ const Products = () => {
   const [filterCategory, setFilterCategory] = useState('');
 
   useEffect(() => {
-    fetch('https://fakestoreapi.com/products', {
+    fetch(`https://fakestoreapi.com/products`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
@@ -29,7 +29,7 @@ const Products = () => {
   }, []);
 
   function handleClick (e) {
-    setFilterCategory(e.target.innetText)
+    setFilterCategory(e.target.innerText)
   }
 
 
@@ -38,7 +38,7 @@ const Products = () => {
       {!removeLoading && <Loading />}
       {productsData.length > 0 && (
         <div className='ml-80 mr-20 mt-20 relative'>
-          <SideFilters handleClick={handleClick} productsData={productsData}/>
+          <SideFilters handleClick={handleClick}/>
           <ProductsView filterCategory={filterCategory} productsData={productsData} />
         </div>
       )}
