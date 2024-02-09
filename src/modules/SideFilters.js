@@ -1,6 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-const SideFilters = ( { productsData, uniqueCategories, handleClick } ) => {
+const SideFilters = ( { handleClick } ) => {
+
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    fetch('https://fakestoreapi.com/products/categories', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(res => res.json())
+    .then((data) => {
+      console.log(data)
+      setCategories(data)
+    })
+    .catch((err) => console.log(err))
+  }, [])
 
   return (
     <aside className='container fixed top-20 left-20 flex flex-col items-start w-60 p-4 bg-white shadow-xl rounded-2xl border'>
@@ -9,11 +26,11 @@ const SideFilters = ( { productsData, uniqueCategories, handleClick } ) => {
                 <p className='font-bold'>Filter by category: </p>
             </div>
             <div>
-                {uniqueCategories.length > 0 && uniqueCategories.map(cat => {
+                {categories.length > 0 && categories.map(cat => {
                   return (
-                  <div key={cat.id}>
+                  <div>
                     <button onClick={handleClick}>
-                      <p className='hover:text-fuchsia-900 hover:font-bold'>{cat.category.charAt(0).toUpperCase() + cat.category.slice(1)}</p>
+                      <p className='hover:text-fuchsia-900 hover:font-bold'>{cat}</p>
                     </button>
                   </div>
                   )

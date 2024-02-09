@@ -28,13 +28,6 @@ const Products = () => {
     .catch((err) => console.log(err))
   }, []);
 
-  const unique = productsData.filter(
-    (obj, index) =>
-      productsData.findIndex(
-        (item) => item.category === obj.category && item.name === obj.name
-      ) === index
-  )
-
   function handleClick (e) {
     setFilterCategory(e.target.innetText)
   }
@@ -45,7 +38,7 @@ const Products = () => {
       {!removeLoading && <Loading />}
       {productsData.length > 0 && (
         <div className='ml-80 mr-20 mt-20 relative'>
-          <SideFilters handleClick={handleClick} uniqueCategories={unique} productsData={productsData}/>
+          <SideFilters handleClick={handleClick} productsData={productsData}/>
           <ProductsView filterCategory={filterCategory} productsData={productsData} />
         </div>
       )}
