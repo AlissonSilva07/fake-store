@@ -18,11 +18,11 @@ const ProductsGrid = ( { productsData } ) => {
                   </button>
                  
 
-                  <div className='flex flex-col items-start gap-4' key={product.id}>
+                  <div className='w-full flex flex-col items-center gap-4' key={product.id}>
                     <div>
                       <img src={product.image} alt="" className='w-60 h-60 object-contain' />
                     </div>
-                    <div>
+                    <div className='w-full'>
                       <div>
                         <p className='text-xs text-fuchsia-900 font-bold'>{product.category}</p>
                       </div>
