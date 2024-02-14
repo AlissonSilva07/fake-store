@@ -4,7 +4,7 @@ import { ProductContext } from '../context/ProductContext';
 const SideFilters = ( { handleClick, categories } ) => {
 
   return (
-    <aside className='container fixed top-20 left-20 flex flex-col items-start w-60 p-4 bg-white shadow-xl rounded-2xl border'>
+    <aside className='container fixed top-20 left-20 flex flex-col items-start w-fit mt-4 pl-4 pr-16 py-4 bg-white shadow-xl rounded-2xl border z-50'>
         <div>
             <div className='mb-4'>
                 <p className='font-bold'>Filter by category: </p>
