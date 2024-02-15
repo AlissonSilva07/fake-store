@@ -1,26 +1,7 @@
-import React from 'react'
-
 import logoMail from '../imgs/mail.png'
 
-import Testimonials from '../components/Testimonials'
-import PageHero from '../components/PageHero'
-import Categories from './Categories'
-
-const Main = () => {
-  return (
-    <div className='flex flex-col items-center justify-center'>
-
-      
-        <PageHero />
-
-        
-        <Categories />
-        
-
-       
-        {/* <Testimonials /> */}
-       
-
+const NewsLetter = () => {
+    return(
         <div className='flex flex-col items-center w-full p-8 gap-4 mx-20 bg-fuchsia-100'>
             <div>
                 <img src={logoMail} alt="newsletter" className='w-20' />
@@ -38,9 +19,7 @@ const Main = () => {
                 </div>
             </div>
         </div>
-
-    </div>
-  )
+    )
 }
 
-export default Main
+export default NewsLetter

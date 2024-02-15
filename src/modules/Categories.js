@@ -6,7 +6,7 @@ import { SlDiamond } from 'react-icons/sl'
 const Categories = () => {
 
   return (
-    <div className='w-full p-8 grid gap-4 grid-rows-2 grid-cols-2'>
+    <div className='w-full p-8 grid gap-4 grid-rows-2 grid-cols-2 bg-fuchsia-100'>
 
         <button className='w-full flex items-center p-4 bg-fuchsia-900 h-20 rounded-xl border-4 border-white text-white hover:text-fuchsia-900 hover:bg-white hover:border-fuchsia-900 transition-all delay-75 relative overflow-hidden'>
             <div>
