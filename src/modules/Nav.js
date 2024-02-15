@@ -9,28 +9,26 @@ import { Link } from 'react-router-dom'
 
 import SearchBar from '../components/small components/SearchBar'
 import NavItems from '../components/small components/NavItems'
+import { SideMenuMobile } from '../components/small components/nav/SideMenuMobile';
 
 const Nav = () => {
   return (
-    <nav className='fixed top-0 right-0 left-0 h-20 px-8 flex items-center justify-between bg-white shadow-xl z-50'>
+    <nav className='fixed top-0 right-0 left-0 h-20 px-8 flex items-center justify-between bg-white shadow-xl relative z-50'>
 
         {/* Menu - Mobile */}
-        <div>
-            <MdMenu className='text-2xl text-fuchsia-900' />
-        </div>
+        <MdMenu className='text-2xl text-fuchsia-900' />
+
+        <SideMenuMobile />
+
 
         {/* Company Logo - All */}
-        <div>
-            <Link to='/' className='w-auto flex items-center gap-2'>
-                <img src={logoImg} alt="company logo" className='h-8' />
-                <p className='text-2xl font-bold'><span className='text-fuchsia-900'>f</span>ake</p>
-            </Link>
-        </div>
+        <Link to='/' className='w-auto flex items-center gap-2'>
+            <img src={logoImg} alt="company logo" className='h-8' />
+            <p className='text-2xl font-bold'><span className='text-fuchsia-900'>f</span>ake</p>
+        </Link>
 
         {/* Cart - Mobile */}
-        <div>
-            <AiOutlineShoppingCart className='text-2xl text-fuchsia-900' />
-        </div>
+        <AiOutlineShoppingCart className='text-2xl text-fuchsia-900' />
 
         {/* Searchbar - Desktop */}
         <div className='hidden md:flex-1'>
