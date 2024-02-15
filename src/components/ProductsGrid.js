@@ -2,14 +2,14 @@ import React from 'react'
 
 import { Link } from 'react-router-dom';
 
-import { AiOutlineHeart} from 'react-icons/ai'
+import { AiOutlineHeart, AiOutlineShoppingCart } from 'react-icons/ai'
 import EyeButton from './small components/EyeButton';
 
 const ProductsGrid = ( { productsData } ) => {
 
   return (
     <>
-    <div className='grid grid-flow-row grid-cols-4 gap-4 py-4 pl-4'>
+    <div className='grid grid-flow-row grid-cols-2 gap-4 py-4'>
       {productsData.length > 0 && productsData.map((product) => {
           return(
               <div className='flex flex-col w-full gap-2 p-4 items-center bg-white rounded-2xl shadow-xl overflow-hidden border relative z-0'>
@@ -41,7 +41,9 @@ const ProductsGrid = ( { productsData } ) => {
                   </div>
 
                   <div className='w-full flex items-center gap-1'>
-                    <button className='w-full bg-fuchsia-900 py-1 px-4 text-white text-base font-bold rounded-full hover:bg-fuchsia-800'>Add to Cart</button>
+                    <button className='w-full bg-fuchsia-900 py-1 px-4 text-white flex flex-col items-center text-2xl rounded-full hover:bg-fuchsia-800'>
+                      <AiOutlineShoppingCart />
+                    </button>
                     <Link to={`/products/${product.id}`}>
                       <EyeButton />
                     </Link>

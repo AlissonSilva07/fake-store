@@ -23,8 +23,8 @@ const Products = () => {
     <div>
       {!removeLoading && <Loading />}
       {products && (
-        <div className='ml-80 mr-20 mt-20 relative'>
-          <SideFilters handleClick={handleClick} categories={categories}/>
+        <div className='px-8 mt-20 relative'>
+          {/* <SideFilters handleClick={handleClick} categories={categories}/> */}
           <ProductsView filterCategory={filterCategory} productsData={products} removeLoading={removeLoading} />
         </div>
       )}

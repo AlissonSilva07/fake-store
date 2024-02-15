@@ -11,8 +11,7 @@ const ProductsBar = ({productsData , onClickGrid, onClickList}) => {
         bg-fuchsia-900 
         w-auto 
         py-2 
-        px-6 
-        ml-4 
+        px-4 
         text-white 
         text-base 
         font-bold 

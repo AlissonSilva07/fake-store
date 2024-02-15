@@ -7,7 +7,7 @@ const ProductsListing = ({productsData}) => {
     
   return (
     <>
-      <div className='flex flex-col gap-4 p-4 z-0'>
+      <div className='flex flex-col gap-4 py-4 z-0'>
       {productsData.length > 0 && productsData.map((product) => {
           return (
               <div className='flex flex-col w-full gap-2 p-4 items-center bg-white rounded-2xl shadow-xl overflow-hidden border relative z-0'>
