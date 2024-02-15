@@ -28,7 +28,7 @@ const Nav = () => {
         </button>
 
         {/* Sidebar Menu - Mobile */}
-        {openSideMenu && <SideMenuMobile />}
+        {openSideMenu && <SideMenuMobile toggle={toggleSideMenu} />}
 
         {/* Company Logo - All */}
         <Link to='/' className='w-auto flex items-center gap-2'>
