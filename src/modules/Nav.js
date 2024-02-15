@@ -20,7 +20,7 @@ const Nav = () => {
     }
 
   return (
-    <nav className='fixed top-0 right-0 left-0 h-20 px-8 flex items-center justify-between bg-white shadow-xl relative z-50'>
+    <nav className='fixed top-0 right-0 left-0 h-20 px-8 flex items-center justify-between bg-white shadow-xl z-50'>
 
         {/* Menu - Mobile */}
         <button onClick={toggleSideMenu}>
