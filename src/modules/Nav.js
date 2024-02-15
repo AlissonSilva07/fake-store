@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import logoImg from '../imgs/logo.png'
 
-import { AiOutlineUser, AiOutlineShoppingCart, AiOutlineHeart} from 'react-icons/ai'
+import { AiOutlineUser, AiOutlineShoppingCart, AiOutlineHeart, AiOutlineClose } from 'react-icons/ai'
 import { MdMenu } from "react-icons/md";
 
 import { Link } from 'react-router-dom'
@@ -12,14 +12,23 @@ import NavItems from '../components/small components/NavItems'
 import { SideMenuMobile } from '../components/small components/nav/SideMenuMobile';
 
 const Nav = () => {
+
+    const [openSideMenu, setOpenSideMenu] = useState(false);
+
+    const toggleSideMenu = () => {
+        setOpenSideMenu(!openSideMenu)
+    }
+
   return (
     <nav className='fixed top-0 right-0 left-0 h-20 px-8 flex items-center justify-between bg-white shadow-xl relative z-50'>
 
         {/* Menu - Mobile */}
-        <MdMenu className='text-2xl text-fuchsia-900' />
+        <button onClick={toggleSideMenu}>
+            {!openSideMenu ? <MdMenu className='text-2xl text-fuchsia-900' /> : <AiOutlineClose className='text-2xl text-fuchsia-900' />}
+        </button>
 
-        <SideMenuMobile />
-
+        {/* Sidebar Menu - Mobile */}
+        {openSideMenu && <SideMenuMobile />}
 
         {/* Company Logo - All */}
         <Link to='/' className='w-auto flex items-center gap-2'>

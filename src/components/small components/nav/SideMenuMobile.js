@@ -2,36 +2,36 @@ import { IoHomeOutline, IoShirtOutline, IoInformationCircleOutline, IoChatboxEll
 
 export const SideMenuMobile = () => {
     return (
-        <aside className="absolute top-20 left-0 right-0 bottom-0 w-full h-full flex flex-col gap-10 py-4 px-8 bg-white z-50">
+        <aside className="absolute top-20 left-0 right-0 h-auto flex flex-col gap-10 pt-4 pb-8 px-8 bg-white shadow-xl transition ease-in z-50">
             <div className="flex flex-col gap-4">
-                <p>MENU</p>
+                <p className="text-gray-500">MENU</p>
                 <div className="flex items-center gap-2">
-                    <IoHomeOutline className="text-xl" />
-                    <p>Home</p>
+                    <IoHomeOutline className="text-xl text-fuchsia-900" />
+                    <p className="font-bold">Home</p>
                 </div>
                 <div className="flex items-center gap-2">
-                    <IoShirtOutline className="text-xl" />
-                    <p>Products</p>
+                    <IoShirtOutline className="text-xl text-fuchsia-900" />
+                    <p className="font-bold">Products</p>
                 </div>
                 <div className="flex items-center gap-2">
-                    <IoInformationCircleOutline className="text-xl" />
-                    <p>About</p>
+                    <IoInformationCircleOutline className="text-xl text-fuchsia-900" />
+                    <p className="font-bold">About</p>
                 </div>
                 <div className="flex items-center gap-2">
-                    <IoChatboxEllipsesOutline className="text-xl" />
-                    <p>Messages</p>
+                    <IoChatboxEllipsesOutline className="text-xl text-fuchsia-900" />
+                    <p className="font-bold">Messages</p>
                 </div>
             </div>
 
             <div className="flex flex-col gap-4">
-                <p>PROFILE</p>
+                <p className="text-gray-500">PROFILE</p>
                 <div className="flex items-center gap-2">
-                    <IoSettingsOutline className="text-xl" />
-                    <p>Settings</p>
+                    <IoSettingsOutline className="text-xl text-fuchsia-900" />
+                    <p className="font-bold">Settings</p>
                 </div>
                 <div className="flex items-center gap-2">
-                    <IoExitOutline className="text-xl" />
-                    <p>Log-out</p>
+                    <IoExitOutline className="text-xl text-fuchsia-900" />
+                    <p className="font-bold">Log-out</p>
                 </div>
             </div>
         </aside>
