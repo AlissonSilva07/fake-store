@@ -37,9 +37,8 @@ function App() {
       <ProductProvider>
         <Nav />
         <Outlet />
-        {/*
         {showBTT && <BackToTop handleClick={handleScrollUp} />}
-        <Footer /> */}
+        <Footer />
       </ProductProvider>
     </>
   );
