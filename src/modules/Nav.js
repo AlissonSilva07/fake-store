@@ -3,6 +3,7 @@ import React from 'react'
 import logoImg from '../imgs/logo.png'
 
 import { AiOutlineUser, AiOutlineShoppingCart, AiOutlineHeart} from 'react-icons/ai'
+import { MdMenu } from "react-icons/md";
 
 import { Link } from 'react-router-dom'
 
@@ -11,21 +12,41 @@ import NavItems from '../components/small components/NavItems'
 
 const Nav = () => {
   return (
-    <nav className='fixed top-0 right-0 left-0 h-20 px-20 flex items-center gap-10 bg-white shadow-xl z-50'>
+    <nav className='fixed top-0 right-0 left-0 h-20 px-8 flex items-center justify-between bg-white shadow-xl z-50'>
+
+        {/* Menu - Mobile */}
         <div>
-            <Link to='/' className='w-auto flex items-center gap-4'>
-                <img src={logoImg} alt="company logo" className='h-10' />
+            <MdMenu className='text-2xl text-fuchsia-900' />
+        </div>
+
+        {/* Company Logo - All */}
+        <div>
+            <Link to='/' className='w-auto flex items-center gap-2'>
+                <img src={logoImg} alt="company logo" className='h-8' />
                 <p className='text-2xl font-bold'><span className='text-fuchsia-900'>f</span>ake</p>
             </Link>
         </div>
-        <div className='flex-1'>
+
+        {/* Cart - Mobile */}
+        <div>
+            <AiOutlineShoppingCart className='text-2xl text-fuchsia-900' />
+        </div>
+
+        {/* Searchbar - Desktop */}
+        <div className='hidden md:flex-1'>
             <SearchBar />
         </div>
-        <div className='w-auto text-fuchsia-900 font-bold flex gap-10'>
+
+        {/* Items - Desktop */}
+        <div className='w-auto text-fuchsia-900 font-bold hidden md:flex gap-10'>
             <NavItems />
         </div>
-        <div className='w-[2px] h-[40px] bg-fuchsia-900'></div>
-        <div className='w-auto flex items-center gap-10'>
+
+        {/* Items Split - Desktop */}
+        <div className='hidden md:flex w-[2px] h-[40px] bg-fuchsia-900'></div>
+
+        {/* Buttons - Desktop */}
+        <div className='w-auto hidden md:flex items-center gap-10'>
             <button className='flex flex-col items-center gap-1'>
                 <AiOutlineHeart className='text-2xl text-gray-400' />
                 <p className='text-xs text-gray-400 font-bold'>Fav</p>
@@ -39,6 +60,7 @@ const Nav = () => {
                 <p className='text-xs text-gray-400 font-bold'>Profile</p>
             </button>
         </div>
+
     </nav>
   )
 }
